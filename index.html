@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html   ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+    <title>Application 37: not the real site</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600|Architects Daughter" rel="stylesheet"type="text/css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styleLogoFont.css">
+
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.18/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="app.js"></script>
+
+    <script src="common/mainController.js"></script>
+
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+</head>
+<body ng-controller="mainController">
+ <div ng-include="'header.html'"></div>
+  <div class="header header-bg">
+   <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8"> 
+
+        <div class="page" id="view" ng-view></div>
+
+    </div>
+    <div class="col-md-2"> 
+    </div>
+    <div class="clearfix visible-lg"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+sc_project=2721969;
+sc_invisible=0;
+sc_security="5cfe5782";
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="site stats"
+href="http://www.statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="http://c29.statcounter.com/2721969/0/5cfe5782/0/"
+alt="free hit counter" ></a></div></noscript>
+<!-- End of StatCounter Code -->  
+
+
+</body>
+</html>

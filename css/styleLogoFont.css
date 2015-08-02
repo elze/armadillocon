@@ -1,0 +1,263 @@
+.well-armadillocon { 
+  float: right;
+  background-color: transparent;
+  //padding: 10px 10px 10px 0px;
+  padding: 0px 0px 0px 0px;
+  border-style: none;
+  box-shadow: none;
+ }
+
+.guests-and-armad { 
+  float:right; 
+  width:350px;
+}
+
+.armadillo-image { 
+  float:right;
+}
+
+p.guest { 
+  font-size: 14px;
+  //line-height: 90%;
+}
+
+.guests { 
+  float:right;
+  //width: 500px;
+  padding: 0px 30px 0px 0px;
+  //background-image: url("../images/armadillo_150_tilted_30.png");
+  //background-position: 250px 0px, top right;
+  //background-repeat: no-repeat;
+}
+
+
+p.armadillocon-hotel {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+td.armadillocon {
+  padding: 7px;
+}
+
+th.armadillocon {
+  padding: 7px;
+}
+
+.container .jumbotron {
+  border-radius: 50px;
+  //background-image: url("../images/large-Glowing-Fantasy-Star-Cool-1-33.3-10815_200.png");
+  //background-repeat: no-repeat;
+  //background-position: -10% -10%; 
+}
+
+.jumbotron-left-corner {
+  position:relative;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+.jumbotron {
+  //padding: 90px;
+  padding: 20px 30px 30px 150px;
+  //background-color: #eee;
+  background-color: #AAA1C4;
+  //background-color: #D1D8F3;
+  //background-image: url("../images/large-Glowing-Fantasy-Star-Cool-1-33.3-10815_200.png");
+  //background-repeat: no-repeat;
+  //background-position: -10% -10%; 
+
+}
+
+.jumbotron > h1 { 
+  font-size: 3.0em; 
+  font-family: 'Architects Daughter', cursive;
+ }
+
+
+#grad-linear {
+  background: -webkit-linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /*Standard*/
+} 
+
+#grad-radial {
+  background: -webkit-radial-gradient(ellipse, red, yellow, green); /* Safari */
+  background: -o-radial-gradient(ellipse, red, yellow, green); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(ellipse, red, yellow, green); /* Firefox 3.6 to 15 */
+  background: radial-gradient(ellipse, red, yellow, green); /* Standard syntax */
+} 
+
+#grad-radial-transp {
+  background: -webkit-radial-gradient(ellipse, rgba(170, 161, 196, 1),rgba(170, 161, 196, 0)); /* Safari */
+  background: -o-radial-gradient(ellipse, rgba(170, 161, 196, 1),rgba(170, 161, 196, 0)); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(ellipse, rgba(170, 161, 196, 1),rgba(170, 161, 196, 0)); /* Firefox 3.6 to 15 */
+  background: radial-gradient(ellipse, rgba(170, 161, 196, 1),rgba(170, 161, 196, 0)); /* Standard syntax */
+} 
+
+
+.navbar-default .navbar-link:hover {
+  //color: #48D1CC;
+  color: #AAA1C4;
+}
+
+
+.navbar-inverse {
+  //background-color: #222;
+  //background-color: LightBlue;
+  background-color: #9E8AC1;
+  //border-color: #080808;
+  border-color: #ffffff;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #EFF1F5;
+}
+
+.navbar-inverse .navbar-header.armadillocon {
+  //background-color: LightBlue;
+}
+
+.navbar-inverse .navbar-link {
+  color: #333;
+}
+
+.navbar-inverse .navbar-text {
+  color: #333;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #EFF1F5;
+  //color: #FF8C00;
+  font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #EFF1F5;
+  //color: #FF8C00;
+  //background-color: transparent;
+  background-color: #8175A6;
+}
+
+
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  //color: #ff0000;
+  color: #D7CADE;
+  //color: #FF8C00;
+  font-weight: bold;
+  //background-color: #48D1CC;
+  //background-color: #727FA2;
+  background-color: #AAA1C4;
+  //background-color: #ff0000;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  color: #D7CADE;
+  //color: #FF8C00;
+   font-weight: bold;
+  //background-color: #48D1CC;
+  background-color: #727FA2;
+}
+
+//.dropdown-menu > li > a {
+//  color: #FF8C00;
+//}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #262626;
+  //color: #FF8C00;
+  text-decoration: none;
+  font-weight: bold;
+  //background-color: #f5f5f5;
+  background-color:#AAA1C4;
+  //background-color: #B6EDEB;
+}
+
+/****
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: #48D000;
+}
+
+****/
+
+@media (max-width: 767px) {
+
+.jumbotron {
+  padding: 5px 5px 5px 5px;
+  background-color: #AAA1C4;
+}
+
+
+  .jumbotron > h1 { 
+    font-size: 2.0em; 
+    font-family: 'Architects Daughter', cursive;
+  }
+
+.armadillo-image { 
+  display:none;
+  float:none;
+}
+
+.container .jumbotron {
+  border-radius: 10px;
+}
+
+.guests-and-armad { 
+  float:none; 
+  width:auto;
+}
+
+.guests { 
+  float:none;
+  //width: 500px;
+  padding: 0px 0px 0px 0px;
+}
+
+
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+
+  /*******
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ff0000;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    //color: #333;
+    color: #ff0000;
+    background-color: transparent;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ff0000;
+    background-color: #e7e7e7;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    //color: #ccc;
+    color: #ff0000;
+    background-color: transparent;
+  }
+  ******/
+}
+
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  //background-color: #d9d9d9;
+  background-color: #cbd1de;
+}
+

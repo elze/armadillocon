@@ -1,0 +1,32 @@
+  <h2>Register for ArmadilloCon 2015</h2>      
+
+<p>You can register online at advance registration rates by July 19th, 10pm. Online registration is for all three days of the convention only. After July 19th, you'll be able to register at the door. </p>
+
+<p>At-the-door rates:</p>
+<p>3 Day Membership - $50</p>
+<p>2 Day Membership - $40</p>
+<p>1 Day - Friday or Sunday only - $25</p>
+<p>1 Day - Saturday only - $35</p>
+<p>Student Membership with current ID - $30</p>
+<p>Tween (ages 7-12) - $25</p>
+<p>Child (0-6) - Free.</p>
+
+<h3>Buy a membership</h3>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="WT7CMNSAWAS7N">
+<table>
+<tr><td><input type="hidden" name="on0" value="Choose Your Membership Level">Choose Your Membership Level</td></tr>
+<tr><td><select name="os0">
+	<option value="Child 7 to 12 Membership">Child 7 to 12 Membership $25.00 USD</option>
+	<option value="Student Membership Current ID Required">Student Membership (Current ID Required) $30.00 USD</option>
+	<option value="Adult Membership">Adult Membership $40.00 USD</option>
+</select> </td></tr>
+<tr><td><input type="hidden" name="on1" value="Badge Name">Badge Name</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+

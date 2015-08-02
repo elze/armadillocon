@@ -1,0 +1,16 @@
+<p>Guest of Honor - <a href="http://kenliu.name/"><b>Ken Liu</b></a>&nbsp;<a href="http://2015.armadillocon.org/guest_bios#Ken_Liu">[Bio]</a></p>
+<p>Special Guest - <a href="http://jamesmorrow.info/"><b>James Morrow</b></a>&nbsp;<a href="http://2015.armadillocon.org/guest_bios#James_Morrow">[Bio]</a></p>
+<p>Editor Guest - <a href="http://ltimmelduchamp.com/"><b>L. Timmel Duchamp</b></a>&nbsp;<a href="http://2015.armadillocon.org/guest_bios#Timmel_Duchamp">[Bio]</a></p>
+<p>Fan Guest - <a href="http://www.sfsignal.com"><b>John DeNardo</b></a>&nbsp;<a href="http://2015.armadillocon.org/guest_bios#John_DeNardo">[Bio]</a></p>
+<p>Toastmaster - <a href="http://www.csleicht.com/"><b>Stina Leicht</b></a>&nbsp;<a href="http://2015.armadillocon.org/guest_bios#Stina_Leicht">[Bio]</a></p>
+<p>Artist Guest - <a href="http://rockykelley.com/"><b>Rocky Kelley</b></a>&nbsp;<a href="http://2015.armadillocon.org/guest_bios#Rocky_Kelley">[Bio]</a></p>
+
+<p>We are also proud to announce that the following people have agreed to be part of programming at ArmadilloCon 37:</p>
+
+<div ng-app="myApp" ng-controller="guestsController">
+<table class="table table-striped">
+<tr ng-repeat="rows in chunkedData">
+<td ng-repeat="item in rows"><span ng-bind-html="item.person | unsafe"></span>&nbsp;<a href="http://2015.armadillocon.org/guest_bios#{{ item.aname }}">[Bio]</a><br/><a href="http://www.{{ item.website }}" target="_blank">{{ item.website }}</a></td>
+</tr>
+</table>
+</div>
