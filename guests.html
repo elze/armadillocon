@@ -7,10 +7,12 @@
 
 <p>We are also proud to announce that the following people have agreed to be part of programming at ArmadilloCon 37:</p>
 
-<div ng-app="myApp" ng-controller="guestsController">
+<div>
 <table class="table table-striped">
 <tr ng-repeat="rows in chunkedData">
-<td ng-repeat="item in rows"><span ng-bind-html="item.person | unsafe"></span>&nbsp;<a href="http://2015.armadillocon.org/guest_bios#{{ item.aname }}">[Bio]</a><br/><a href="http://www.{{ item.website }}" target="_blank">{{ item.website }}</a></td>
+ <td ng-repeat="guestID in rows">
+  <span ng-bind-html="names[guestID].person | unsafe"></span>&nbsp;<a href="#/bios#{{ names[guestID].aname }}">[Bio]</a><br/><a href="http://www.{{ names[guestID].website }}" target="_blank">{{ names[guestID].website }}</a>
+ </td>
 </tr>
 </table>
 </div>

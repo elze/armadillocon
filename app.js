@@ -23,6 +23,11 @@ angular
                 controller  : 'mainController'
             })
 
+            .when('/contact', {
+                templateUrl : 'contact.html',
+                controller  : 'mainController'
+            })
+
             .when('/dealers', {
                 templateUrl : 'dealers.html',
                 controller  : 'mainController'
@@ -30,6 +35,16 @@ angular
 
             .when('/gaming', {
                 templateUrl : 'gaming.html',
+                controller  : 'mainController'
+            })
+
+            .when('/guest_bios', {
+                templateUrl : 'guest_bios.html',
+                controller  : 'mainController'
+            })
+
+            .when('/guests', {
+                templateUrl : 'guests.html',
                 controller  : 'mainController'
             })
 

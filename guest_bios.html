@@ -1,0 +1,17 @@
+<h3>Guest biographies</h3>
+
+<div class="featured-guest-bio" ng-repeat="guestID in featured_guest_names_sorted">
+<b><a class="guest-name" id="{{ featured_guests[guestID].aname }}">{{ featured_guests[guestID].person }}</a></b>, {{ featured_guests[guestID].title }}
+<div><a href="http://www.{{ featured_guests[guestID].website }}" target="_blank">{{ featured_guests[guestID].website }}</a></div>
+<div ng-bind-html="featured_guests[guestID].bio | unsafe"></div>
+</div>
+
+<hr/>
+
+<div ng-repeat="guestID in guest_names_sorted">
+<b><a class="guest-name" id="{{ names[guestID].aname }}"><span ng-bind-html="names[guestID].person | unsafe"/></a></b>
+<div><a href="http://www.{{ names[guestID].website }}" target="_blank">{{ names[guestID].website }}</a></div>
+<div ng-bind-html="names[guestID].bio | unsafe"></div>
+</div>
+
+
