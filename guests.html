@@ -5,13 +5,18 @@
 <p>Toastmaster - <a href="http://www.csleicht.com/"><b>Stina Leicht</b></a>&nbsp;<a href="http://2015.armadillocon.org/guest_bios#Stina_Leicht">[Bio]</a></p>
 <p>Artist Guest - <a href="http://rockykelley.com/"><b>Rocky Kelley</b></a>&nbsp;<a href="http://2015.armadillocon.org/guest_bios#Rocky_Kelley">[Bio]</a></p>
 
+<script type="text/javascript">
+	console.log("We are in guests.html");
+	$scope.setTitle("Guests");
+</script>
+
 <p>We are also proud to announce that the following people have agreed to be part of programming at ArmadilloCon 37:</p>
 
 <div>
 <table class="table table-striped">
 <tr ng-repeat="rows in chunkedData">
  <td ng-repeat="guestID in rows">
-  <span ng-bind-html="names[guestID].person | unsafe"></span>&nbsp;<a href="#/bios#{{ names[guestID].aname }}">[Bio]</a><br/><a href="http://www.{{ names[guestID].website }}" target="_blank">{{ names[guestID].website }}</a>
+  <span ng-bind-html="names[guestID].person | unsafe"></span>&nbsp;<a href="#/guest_bios#{{ names[guestID].aname }}">[Bio]</a><br/><a href="http://www.{{ names[guestID].website }}" target="_blank">{{ names[guestID].website }}</a>
  </td>
 </tr>
 </table>

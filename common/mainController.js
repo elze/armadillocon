@@ -16,7 +16,25 @@ angular.module('app').filter('unsafe', function($sce) {
     };
 });
 
-function mainController($scope, $http) { 
+function mainController($scope, $location, $routeParams, $rootScope, $http) { 
+  /*****
+  if ($routeParams.receivedMode == false) {
+    $scope.inputMode = true;
+  }
+
+
+  $rootScope.$on("$locationChangeStart", function(event, next, current) { 
+      console.log("location changing to:" + next); 
+      var locationParts = next.split("/"); 
+      $scope.title = locationParts[locationParts.length - 1];
+    });
+
+  ******/
+
+  $scope.setTitle = function(newTitle) {
+    $scope.title = newTitle;
+  }
+
     $scope.featured_guests = {
 				  "liu": {person:'Ken Liu', aname: "Ken_Liu", shortname: "Liu", title:"Guest of Honor", website: "kenliu.name", bio: "Ken Liu (kenliu.name) is an author and translator of speculative fiction, as well as a lawyer and programmer. A winner of the Nebula, Hugo, and World Fantasy Awards, he has been published in <i>The Magazine of Fantasy & Science Fiction</i>, <i>Asimov</i>'s, <i>Analog</i>, <i>Clarkesworld</i>, <i>Lightspeed</i>, and <i>Strange Horizons</i>, among other places. He lives with his family near Boston, Massachusetts.<br/>Ken's debut novel, <i>The Grace of Kings</i>, the first in a silkpunk epic fantasy series, was published by Saga Press in April 2015. Saga will also publish a collection of his short stories, <i>The Paper Menagerie and Other Stories</i>, in November 2015."},
 				  "denardo": {person:'John DeNardo', aname: "John_DeNardo", shortname: "DeNardo", title:"Fan Guest", website: "sfsignal.com", bio: "John DeNardo is the managing editor at <i>SF Signal</i> (www.sfsignal.com), a speculative fiction blog launched in 2003 devoted to sharing everything cool about science fiction, fantasy and horror. With a literary focus and several thousand daily visitors, <i>SF Signal</i> is the go-to site for news, interviews, reviews, articles, and lots of other cool stuff.  SF Signal was voted Best Literary Blog in the SFX 2011 Blog Awards, and won 3 Hugo Awards for Best Fanzine (2012, 2013) and Best Fancast.<br/>John writes a weekly online column at <i>Kirkus Reviews</i>, where he shares his love of science fiction.<br/>He also likes bagels."},
@@ -78,59 +96,37 @@ function mainController($scope, $http) {
     };
 
     $scope.send_email = function () {
-        /*
-        * Validate the Email and Password using Regular Expression.
-        * Once Validated call the PHP file using HTTP Post Method.
-        */
-        /*
-        * Validate Email and Password.
-        * Email shound not be blank, should contain @ and . and not more than 30 characters.
-        * Password Cannot be blank, not be more than 12 characters, should not contain 1=1.
-        * Set the Messages to Blank each time the function is called.
-        */
+      var payload = "sender_name=" + $scope.sender_name + "&email_from=" + $scope.email_from + "&subject=" + $scope.subject + "&category=" + $scope.category + "&message=" + $scope.message;
+      $http.post("http://armadillocon.org/testang/jsonTest.php",
+		 //"sender_name=Foo&email_from=elze.hamilton@gmail.com&subject=FooTest&category=website_feedback&message=TestFoo")
+		 payload)
+      .then(function(response) {
+	  //$scope.email_sent = "Thank you. We received your email.";
+	  $scope.email_sent = "Thank you. We received your email.";
+	  $scope.receivedMode = true;
+	  //$scope.inputMode = false;
+	  //$location.path("/contact/1");
+	  //$location.path("/message_received/" + $scope.email_sent);
+	  //$location.path("/message_received/" + $scope.email_sent + "/" + $scope.sender_name + "/" + $scope.email_from + "/" + $scope.subject + "/" + $scope.category);
+	}, function (response) {
+	  $scope.email_sent = "An error occurred while trying to send your email: " + response.error;
+	  //$scope.email_sent = "Error";
+	  $scope.receivedMode = true;
+	  //$scope.inputMode = false;
+	  //$location.path("/contact/1");
+	  //$location.path("/message_received/" + $scope.email_sent);
+	  //$location.path("/message_received/" + $scope.email_sent + "/" + $scope.sender_name + "/" + $scope.email_from + "/" + $scope.subject + "/" + $scope.category);
+	});
 
-        var error = 0;
-      /*******
-        $scope.message = "";
-        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        if ($scope.email == "" || $scope.email == null) {
-            error = 1;
-        }
-        if (!emailReg.test($scope.email)) {
-            error = 2;
-        }
+    };
+    
+    $scope.setTheNeedToValidate = function () {
+      $scope.rightMomentToValidate = true;
+    };
 
-        if ($scope.password == "" || $scope.password == null) {
-            error = 3;
-        }
-	**********/
-        if (error == 0) {
-	  //$http.post('http://armadillocon.org/testang/contact.php',
-	  //$http.post('http://armadillocon.org/testang/jsonTest.php',
-	  $http.get('http://www.w3schools.com/angular/customers.php')
-	    /*********
-				   {
-				   sender_name: $scope.sender_name,
-				       email_from: $scope.email_from,
-				       subject: $scope.subject,
-				       category: $scope.category,
-				       message: $scope.message
-				       })
-				       *********/
-                //headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-				  .then(function (response) {
-				       $scope.message = "From PHP file : " + response.data;
-				       $scope.status = response.status;
-				       $scope.statusText = response.statusText;
-				     }, function (response) {
-				       $scope.message = "We are in the second then function. I guess an error occurred?";
-				     });
-        }
-        else {
-            $scope.message = "You have Filled Wrong Details! Error: " + error;
-        }
+    $scope.removeTheNeedToValidate = function () {
+      $scope.rightMomentToValidate = false;
     }
-
 
 }
 
