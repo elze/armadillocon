@@ -1,3 +1,17 @@
+var titleDictionary = {
+  "about" : "About",
+  "artshow": "Art show",
+  "contact" : "Contact",
+  "dealers": "Dealers",
+  "gaming": "Gaming",
+  "guest_bios": "Guest bios",
+  "guests": "Guests",
+  "hotel": "Hotel",
+  "policies": "Policies",
+  "register": "Register",
+  "sched": "Schedule Grid",
+  "writers_workshop": "Writers' workshop"};
+
 angular
     .module('app', [
 		    'ngRoute',
@@ -78,6 +92,11 @@ angular
                 controller  : 'mainController'
             })
 
+            .when('/sched', {
+                templateUrl : 'sched.html',
+                controller  : 'mainController'
+            })
+
             .when('/writers_workshop', {
 	      title: "Writers workshop: Armadillocon 37: not the real site",
                 templateUrl : 'writers_workshop.html',
@@ -87,10 +106,36 @@ angular
 
 }).run(function ($rootScope, $location) { //Insert in the function definition the dependencies you need.
     //Do your $on in here, like this:
-    $rootScope.$on("$locationChangeStart",function(event, next, current){
-	console.log("app.run: location changing to:" + next); 
-	var locationParts = next.split("/"); 
-	$rootScope.title = locationParts[locationParts.length - 1];
+    //$rootScope.$on("$locationChangeStart",function(event, next, current){
+    $rootScope.$on("$routeChangeStart",function(event, obj){
+	var origPath = obj.$$route.originalPath;
+	console.log("app.run: route changing to:" + origPath); 
+	var postscribeTheCounter = false;
+	if ((origPath === "") || (origPath === "/")) {
+	  if (!$rootScope.title) {
+	    $rootScope.title = "Home";
+	    postscribeTheCounter = true;
+	  }
+	}
+	else {
+	  //$rootScope.title = titleDictionary[locationParts[locationParts.length - 1]];
+	  var pathLastPart = origPath.substring(1);
+	  $rootScope.title = titleDictionary[pathLastPart];
+	  postscribeTheCounter = true;
+	}
+
+	if (postscribeTheCounter) { 
+	  sc_project=2721969;	
+	  sc_invisible=0;
+	  sc_security="5cfe5782";
+
+	  var scURL = 'http://www.statcounter.com/counter/counter.js';
+
+	  var scImg = 'http://c29.statcounter.com/2721969/0/5cfe5782/0/';
+	  //postscribe('#statcounterInd', '');
+	  angular.element(document.getElementById('statcounterInd')).empty();
+	  postscribe('#statcounterInd', '<script src="' + scURL + '"><img class="statcounter" src="' + scImg + '" alt="free hit counter"><\/script>');
+	}
     });
 });
 

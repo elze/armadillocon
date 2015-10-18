@@ -88,6 +88,30 @@ function mainController($scope, $location, $routeParams, $rootScope, $http) {
 			 "L": "Lobby"};
 
 
+    $scope.timeslots = [
+			{timeslot_id: "Fr1600", weekday: "Fri", timelong: "4:00 PM - 5:00 PM", 
+			 panels: [
+      {location: "D", panel_id: "Welcome_to_ArmadilloCon", panel_title: "Welcome to ArmadilloCon", description: "Our panelists will talk about the essential elements of sf cons in general and ArmadilloCon in particular. Learn about all the can't-miss events you should attend to get the most out of our con.", 
+       panelists: ["Scott_Bobo", "Elizabeth_Burton", "Jennifer_Juday", "Jessica_Reisman"],
+       moderator: "Jennifer_Juday"}
+				  ]
+			},
+			{timeslot_id: "Fr1700", weekday: "Fri", timelong: "5:00 PM - 6:00 PM", 
+			 panels: [
+      {location: "D", panel_id: "Alternate_History", panel_title: "Alternate History", description: "Why is this genre so fascinating, and how does it relate to the rest of speculative fiction? What special challenges does it pose for the writer -- and reader?", 
+       panelists: ["Lou_Antonelli", "Christopher_Brown", "Madeleine_Rose_Dimond", "Katharine_Eliska_Kimbriel", "C_J_Mills", "Howard_Waldrop"],
+      moderator: "Christopher_Brown"},
+      {location: "E", panel_id: "Researching_Your_Book", panel_title: "Researching Your Book", description: "Where to look, who to ask, what to do? How much is too much? What do you do with all the research that doesn't fit in the book?", 
+       panelists: ["Jayme_Lynn_Blaschke", "Kathleen_Cheney", "Jaime_Lee_Moyer", "Cary_Osborne", "Lee_Thomas", "Ernie_Wood"],
+       moderator: "Kathleen_Cheney"},
+      {location: "F", panel_id: "Growing_Next_Generation_Readers", panel_title: "Growing the Next Generation of Readers", description: "Dicussing current works for young readers, and older books that are still relevant.", 
+       panelists: ["Peni_Griffin", "John_Hornor_Jacobs", "Mari_Mancusi", "K_B_Rylander", "Patrice_Sarath", "James_Stoddard"],
+       moderator: "Patrice_Sarath"}
+				  ]
+			}
+			];
+
+
     $scope.try_php = function () { 
       $http.get("http://armadillocon.org/testang/jsonTest.php")
 	.success(function(response) {
