@@ -1,1 +1,54 @@
-<p>This page will contain a slideshow.</p>
+<div ng-controller="slidesController">
+  <div>
+    <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+      <uib-slide ng-repeat="slide in slides" active="slide.active">
+	<div>
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        </div>
+         <div class="carousel-caption" style="margin:auto; width: {{ slide.width }}" ng-bind-html="slide.text | unsafe">
+        </div>
+      </uib-slide>
+
+    </uib-carousel>
+
+  </div>
+
+</div>
+
+<div>
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2000/MaryDoriaRussellCake2_50.jpg"/>
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2003/p0000240VingeElizMoon_50.jpg"/>
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2004/P0000530RobLandleyMakesLiquidNitrogenIceCream_50.jpg"/>
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2004/P518CatConradDrawing_50.jpg"/>
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2005/20050819Friday/CIMG0169StrossMcCarthy_50.jpg"/>
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2005/20050819Friday/CIMG0171JuliaMandala_50.jpg"/>
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2005/20050819Friday/CIMG0161Bards_50.jpg">
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2005/20050819Friday/CIMG0172RobersonStrossMinz_50.jpg">
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2005/20050820Saturday/CIMG0190JuliaMandalaLindaDonahue_50.jpg">
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2005/20050820Saturday/CIMG0194CarolineSpectorGuitar_50.jpg">
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2005/20050820Saturday/CIMG0206InflatableAstronauts_50.jpg">
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2005/20050821Sunday/CIMG0237StrossRingelBroderick2_50.jpg">
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2006/20060811/CIMG3716GrantKruger_50.jpg">
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2007/20070810Friday/CIMG6766RobersonAndKenner_50.jpg">
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2007/20070810Friday/CIMG6826SharynNovemberLouiseMarley_50.jpg">
+<img class="hover-image" src="https://objects.dreamhost.com:443/elze_images/ArmadilloCon2007/20070811Saturday/CIMG6860PurpleAlien_50.jpg">
+</div>
+
+<div>
+<p class="hover-small-caption">Mary Doria Russell presented with a birthday cake on her 50th birthday at ArmadilloCon 2000</p>
+<p class="hover-small-caption">Vernor Vinge and Elizabeth Moon at ArmadilloCon 2003</p>
+<p class="hover-small-caption">Rob Landley makes liquid nitrogen ice cream in the ConSuite at ArmadilloCon 2004</p>
+<p class="hover-small-caption">Artist R. Cat Conrad and his rendition of fantasy world at Interactive Fantasy World Building panel at ArmadilloCon 2004</p>
+<p class="hover-small-caption">Charles Stross (right) is talking with Wil McCarthy at ArmadilloCon 2005</p>
+<p class="hover-small-caption">Texas author Julia Mandala at ArmadilloCon 2005</p>
+<p class="hover-small-caption">Celtic band Brobdingnagian Bards and author Rie Sheridan at their performance at ArmadilloCon 2005</p>
+<p class="hover-small-caption">Chris Roberson, Charles Stross, and Jim Minz on the Space Opera panel at ArmadilloCon 2005</p>
+<p class="hover-small-caption">Texas authors Julia Mandala and Linda Donahue at ArmadilloCon 2005</p>
+<p class="hover-small-caption">Brad Denton and Caroline Spector play in their band Two-Headed Baby at ArmadilloCon 2005</p>
+<p class="hover-small-caption">Inflatable spaceships and astronauts at a room party at ArmadilloCon 2005</p>
+<p class="hover-small-caption">Charles Stross, Faye Ringel, and Damien Broderick on The New Weird Movement in SF Literature panel at ArmadilloCon 2005</p>
+<p class="hover-small-caption">Authors Chris Roberson and Julie Kenner, teachers at the ArmadilloCon 2007 writers workshop</p>
+<p class="hover-small-caption">Fan Guest of Honor Grant Kruger</a> at ArmadilloCon 2006</p>
+<p class="hover-small-caption">Editor GoH Sharyn November and author Louise Marley at ArmadilloCon 2007</p>
+<p class="hover-small-caption">Robot Group booth with a purple alien robot at ArmadilloCon 2007</p>
+<div>
