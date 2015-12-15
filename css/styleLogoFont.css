@@ -292,3 +292,52 @@ a.guest-name {
   background-color: #cbd1de;
 }
 
+.carousel-caption {
+  /****
+      max-width: 550px;
+      padding: 150px 20px 0px;
+      margin:0 auto;
+      margin-top: 400px;
+     ******/
+  text-align:center;
+  position: relative; 
+  right: auto;
+  left: auto;
+  text-shadow: none;
+  color: black;
+}
+
+.carousel-indicators {
+  position: relative;
+}
+
+.carousel-indicators li {
+  border: 1px solid #000;
+  border-radius: 10px;
+  /* list-style-type: none; */
+}
+
+.carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #000;
+}
+
+.carousel-indicators li:hover {
+
+}
+
+
+.hover-image {
+  display: none;
+  border: 2px solid #8A2BE2;
+  border-radius: 10px;
+}
+
+.hover-small-caption {  
+  display: none;
+  background-color: #AAA1C4;
+  padding: 5px 5px 5px 5px;
+  border-radius: 10px;
+}

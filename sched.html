@@ -1,0 +1,17 @@
+<h3>Schedule of Events</h3>
+
+<dl>
+<div ng-repeat="timeslot in timeslots">
+ <div ng-repeat="panel in timeslot.panels">
+  <dt>
+	{{ timeslot.timeslot_id + panel.location }} <b><a class="guest-name" id="{{ panel.panel_id }}">{{ panel.panel_title }}</a></b>
+  <dd> {{ timeslot.weekday }}: {{ timeslot.timelong }} {{ locations[panel.location] }} </dd>
+  <dd><i> {{ displayPanelists(panel.panelists, panel.moderator, timeslot.timeslot_id, panel.panel_id) }} </span></i></dd>
+  <dd>{{ panel.description }}</dd>
+
+  </dt>
+ </div>
+</div>
+
+</div>
+</dl>

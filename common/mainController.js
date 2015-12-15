@@ -121,25 +121,15 @@ function mainController($scope, $location, $routeParams, $rootScope, $http) {
 
     $scope.send_email = function () {
       var payload = "sender_name=" + $scope.sender_name + "&email_from=" + $scope.email_from + "&subject=" + $scope.subject + "&category=" + $scope.category + "&message=" + $scope.message;
-      $http.post("http://armadillocon.org/testang/jsonTest.php",
+      $http.post("http://armadillocon.org/testang/emailForm.php",
 		 //"sender_name=Foo&email_from=elze.hamilton@gmail.com&subject=FooTest&category=website_feedback&message=TestFoo")
 		 payload)
       .then(function(response) {
-	  //$scope.email_sent = "Thank you. We received your email.";
 	  $scope.email_sent = "Thank you. We received your email.";
 	  $scope.receivedMode = true;
-	  //$scope.inputMode = false;
-	  //$location.path("/contact/1");
-	  //$location.path("/message_received/" + $scope.email_sent);
-	  //$location.path("/message_received/" + $scope.email_sent + "/" + $scope.sender_name + "/" + $scope.email_from + "/" + $scope.subject + "/" + $scope.category);
 	}, function (response) {
 	  $scope.email_sent = "An error occurred while trying to send your email: " + response.error;
-	  //$scope.email_sent = "Error";
 	  $scope.receivedMode = true;
-	  //$scope.inputMode = false;
-	  //$location.path("/contact/1");
-	  //$location.path("/message_received/" + $scope.email_sent);
-	  //$location.path("/message_received/" + $scope.email_sent + "/" + $scope.sender_name + "/" + $scope.email_from + "/" + $scope.subject + "/" + $scope.category);
 	});
 
     };
