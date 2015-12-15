@@ -1,3 +1,6 @@
+	// That's right, responsibilities_email_addresses.php is not in Github. I didn't want to make the committee members
+	// email addresses public, which they would become in Github.
+
 	include 'responsibilities_email_addresses.php';
 
 	$category = $clean_key_value_pairs['category'];
