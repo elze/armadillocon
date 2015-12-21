@@ -1,7 +1,5 @@
 var bigRandomNumber = 0;
 
-angular.module('app', ['ngAnimate', 'ui.bootstrap']);
-
 /*********
 angular.module('app').filter('unsafe', function($sce) {
     return function(val) {
@@ -13,6 +11,12 @@ angular.module('app').filter('unsafe', function($sce) {
 angular
   .module('app')
   .controller('slidesController' , slidesController);
+
+/*****
+angular
+  .module('app')
+  .controller('mainController' , mainController);
+*********/
 
 var imagePaths = ['http://2015.armadillocon.org/sites/default/files/images/MaryDoriaRussellCake2_600.jpg',
 	      'http://2015.armadillocon.org/sites/default/files/images/p0000240VingeElizMoon_600.jpg',

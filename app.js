@@ -20,7 +20,6 @@ angular
 
 .config(function($routeProvider) {
         $routeProvider
-
             .when('/', {
                 templateUrl : 'home.html',
                 controller  : 'slidesController'
@@ -29,66 +28,79 @@ angular
             .when('/about', {
                 templateUrl : 'about.html',
                 controller  : 'mainController'
+		//  controller  : 'myMainController'
             })
 
             .when('/artshow', {
                 templateUrl : 'artshow.html',
                 controller  : 'mainController'
+		//  controller  : 'myMainController'
             })
 
             .when('/contact', {
                 templateUrl : 'contact.html',
                 controller  : 'mainController'
+		//  controller  : 'myMainController'
             })
 
             .when('/contact/:receivedMode', {
                 templateUrl : 'contact.html',
                 controller  : 'mainController'
+		//  controller  : 'myMainController'
             })
 
             .when('/dealers', {
                 templateUrl : 'dealers.html',
                 controller  : 'mainController'
+		//  controller  : 'myMainController'
             })
 
             .when('/gaming', {
                 templateUrl : 'gaming.html',
                 controller  : 'mainController'
+		//  controller  : 'myMainController'
             })
 
             .when('/guest_bios', {
                 templateUrl : 'guest_bios.html',
                 controller  : 'mainController'
+		//  controller  : 'myMainController'
             })
 
             .when('/guests', {
                 templateUrl : 'guests.html',
                 controller  : 'mainController'
+		//  controller  : 'myMainController'
             })
 
             .when('/hotel', {
                 templateUrl : 'hotel.html',
                 controller  : 'mainController'
+		//  controller  : 'myMainController'
             })
 
             .when('/policies', {
                 templateUrl : 'policies.html',
                 controller  : 'mainController'
+		//  controller  : 'myMainController'
             })
 
             .when('/register', {
                 templateUrl : 'register.html',
                 controller  : 'mainController'
+		//  controller  : 'myMainController'
             })
 
             .when('/sched', {
                 templateUrl : 'sched.html',
                 controller  : 'mainController'
+		//  controller  : 'myMainController'
             })
 
             .when('/writers_workshop', {
                 templateUrl : 'writers_workshop.html',
                 controller  : 'mainController'
+		//  controller  : 'myMainController'
             });
 
 
