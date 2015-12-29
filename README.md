@@ -1,0 +1,2 @@
+# armadillocon
+Angular.js SPA website for ArmadilloCon, an Austin science fiction convention.</a> This is still a work in progress, and some parts of the website don't work yet. Yes, the dates of the event are in the past. I'm keeping it that way until the site is fully functional, and then I'll update it with the next year's information. It is deployed <a href="http://armadillocon.org/testang">here</a>.
